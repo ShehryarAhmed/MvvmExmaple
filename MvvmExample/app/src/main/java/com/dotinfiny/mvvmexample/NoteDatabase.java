@@ -2,6 +2,7 @@ package com.dotinfiny.mvvmexample;
 
 import android.content.Context;
 import android.os.AsyncTask;
+import android.util.Log;
 
 import androidx.annotation.NonNull;
 import androidx.room.Database;
@@ -18,6 +19,7 @@ public abstract class NoteDatabase extends RoomDatabase {
 
     public static synchronized NoteDatabase getInstance(Context context) {
         if (instance == null) {
+            Log.d("Test","instance");
             instance = Room.databaseBuilder(context.getApplicationContext(),
                     NoteDatabase.class, "note_database")
                     .fallbackToDestructiveMigration()
