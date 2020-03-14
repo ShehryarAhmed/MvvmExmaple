@@ -23,12 +23,10 @@ public class NoteRepository {
 
     public void update(Note note) {
         new UpdateNoteAsyncTask(noteDao).execute(note);
-
     }
 
     public void delete(Note note) {
         new DeleteNoteAsyncTask(noteDao).execute(note);
-
     }
 
     public void deleteAllNotes() {
