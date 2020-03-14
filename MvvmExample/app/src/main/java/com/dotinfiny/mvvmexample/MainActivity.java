@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity implements NoteAdapter.OnIte
         noteViewModel.getAllNotes().observe(this, new Observer<List<Note>>() {
             @Override
             public void onChanged(List<Note> notes) {
-                adapter.setNotes(notes);
+                adapter.submitList(notes);
             }
         });
 
