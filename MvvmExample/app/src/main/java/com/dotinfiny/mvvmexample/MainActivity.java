@@ -30,7 +30,6 @@ public class MainActivity extends AppCompatActivity implements NoteAdapter.OnIte
     RecyclerView recyclerView;
     FloatingActionButton actionButton;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,12 +37,12 @@ public class MainActivity extends AppCompatActivity implements NoteAdapter.OnIte
 
         recyclerView = findViewById(R.id.recyclerview);
         actionButton = findViewById(R.id.floating_btn);
+
         actionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, AddEditNoteActivity.class);
                 startActivityForResult(intent, ADD_NOTE_REQUEST);
-
             }
         });
 
